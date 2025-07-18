@@ -25,7 +25,7 @@
       "description": "\nRestore NuGet packages required for this project.",
       "manualInstructions": [
         {
-          "text": "\nRun `dotnet restore` in the new project directory to install NuGet dependencies.\nCheck packages with `dotnet list package` to ensure everything is installed correctly.\nRemember, `dotnet build` will build the project and check for any issues."
+          "text": "\nRun `dotnet restore` in the new project directory to install NuGet dependencies.\nCheck packages with `dotnet list package` to ensure everything is installed correctly.\nRemember, `dotnet build` will build the project and check for any issues.\nUpdate the sln file to replace underscores with spaces in the project name.\n"
         }
       ],
       "continueOnError": true
