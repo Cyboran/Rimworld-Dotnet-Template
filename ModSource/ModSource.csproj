@@ -1,64 +1,46 @@
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5F1D8C6D-E127-4001-A575-E56D99DF271F}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFramework>net472</TargetFramework>
     <RootNamespace>ModSource</RootNamespace>
     <AssemblyName>ModSource</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-  </PropertyGroup>
-  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+
+    <!-- Custom RimWorld version variable -->
     <RimVersion Condition="'$(RimVersion)' == ''">1.6</RimVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
+
+    <!-- Output paths -->
     <OutputPath>bin\$(RimVersion)\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <OutputPath>..\$(RimVersion)\Assemblies</OutputPath>
+    <Optimize>true</Optimize>
     <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="System"/>
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Data"/>
-    <Reference Include="System.Xml"/>
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4523" />
+    <PackageReference Include="Lib.Harmony" Version="2.3.6" />
+    <PackageReference Include="UnlimitedHugs.Rimworld.HugsLib" Version="12.0.0" />
+    <PackageReference Include="UnlimitedHugs.Rimworld.HugsLibChecker" Version="5.0.0" />
   </ItemGroup>
+
+  <!-- Optional: prevent copying NuGet DLLs into the mod folder -->
   <ItemGroup>
-    <Compile Include="Class1.cs"/>
-    <Compile Include="Properties\AssemblyInfo.cs"/>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4523"/>
-    <PackageReference Include="Lib.Harmony" Version="2.3.6"/>
-    <PackageReference Include="UnlimitedHugs.Rimworld.HugsLib" Version="12.0.0"/>
-    <PackageReference Include="UnlimitedHugs.Rimworld.HugsLibChecker" Version="5.0.0"/>
-  </ItemGroup>
-  <ItemDefinitionGroup>
-    <Reference>
-      <Private>False</Private>
-    </Reference>
-    <ProjectReference>
-      <Private>False</Private>
-    </ProjectReference>
-    <PackageReference>
+    <PackageReference Update="Krafs.Rimworld.Ref">
       <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
-  </ItemDefinitionGroup>
+    <PackageReference Update="Lib.Harmony">
+      <ExcludeAssets>runtime</ExcludeAssets>
+    </PackageReference>
+    <PackageReference Update="UnlimitedHugs.Rimworld.HugsLib">
+      <ExcludeAssets>runtime</ExcludeAssets>
+    </PackageReference>
+    <PackageReference Update="UnlimitedHugs.Rimworld.HugsLibChecker">
+      <ExcludeAssets>runtime</ExcludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
 </Project>

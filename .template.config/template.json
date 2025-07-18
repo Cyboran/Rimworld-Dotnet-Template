@@ -12,8 +12,7 @@
     "sources": [{
         "modifiers": [{
             "exclude": [
-                ".git/**",
-                "README.md"
+                ".git/**"
             ]
         }]
     }],
@@ -22,19 +21,14 @@
     },
     "postActions": [
     {
-      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "actionId": "AC1156F7-BB77-4DB8-B28F-24EEBCCA1E5C",
       "description": "\nRestore NuGet packages required for this project.",
       "manualInstructions": [
         {
           "text": "\nRun `dotnet restore` in the new project directory to install NuGet dependencies.\nCheck packages with `dotnet list package` to ensure everything is installed correctly.\nRemember, `dotnet build` will build the project and check for any issues."
         }
       ],
-      "continueOnError": true,
-      "args": {
-        "files": [
-          "ModSource/ModSource.csproj"
-        ]
-      }
+      "continueOnError": true
     }
   ]
 }
