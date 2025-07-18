@@ -19,5 +19,17 @@
     }],
     "symbols": {
 
+    },
+    "postActions": [
+    {
+      "actionId": "9bfb0f4f-3d13-4f7b-b3b2-1c06b4c3a6b0",
+      "description": "Reminder: Run `dotnet restore` to install NuGet packages.",
+      "manualInstructions": [
+        {
+          "text": "Run `dotnet restore` in the new project directory to install NuGet dependencies.\nCheck packages with `dotnet list package` to ensure everything is installed correctly.\nRemember, `dotnet build` will build the project and check for any issues."
+        }
+      ],
+      "continueOnError": true
     }
+  ]
 }
