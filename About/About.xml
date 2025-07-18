@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Comments in XML look like this -->
+
 <ModMetaData>
-    <name>ModSource</name>
-    <author>"Your Name Here"</author>
-    <packageId>yourName.ModName</packageId>
-    <description>"Super Cool Mod"</description>
+    <!-- This is the name of the mod -->
+    <!-- TODO: Put Mod Name in place of "ModSource" if needed -->
+    <name>ModSource</name> 
+    <author>Cyboran</author>
+    <!-- It is best to use this format-->
+    <!-- TODO: Put Mod Name without spaces in place of "PLACEHOLDER" -->
+    <packageId>Cyboran.PLACEHOLDER</packageId> 
+    <!-- Be creative, the description is what people will see when they look at your mod and don't leave space between description tags -->
+    <!-- TODO: Put Mod Description in place of "PLACEHOLDER DESCRIPTION" -->
+    <description>PLACEHOLDER DESCRIPTION</description> 
+    <!-- This is the version of RimWorld that the mod is compatible with -->
     <supportedVersions>
         <li>1.4</li>
-    </supportedVersions>
+        <li>1.5</li>
+        <li>1.6</li>
+    </supportedVersions> 
 </ModMetaData>
 <!--
 When adding a preview photo

@@ -44,3 +44,17 @@ To uninstall the template, run the following command:
 ```bash
 dotnet new --uninstall RimMod
 ```
+
+## Building a DLL Package
+To compile the appropriate files, then run the following command: 
+```bash
+msbuild ModSource.csproj /p:Configuration=Release /p:RimVersion=1.4
+```
+or this if you wanted to use the default version
+```bash
+msbuild ModSource.csproj /p:Configuration=Release
+```
+or this if you wanted to use default settings (Debug, Version 1.6)
+```bash
+msbuild ModSource.csproj
+```
