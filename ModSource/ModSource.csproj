@@ -6,6 +6,8 @@
     <AssemblyName>ModSource</AssemblyName>
     <LangVersion>latest</LangVersion>
 
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+
     <!-- Custom RimWorld version variable -->
     <RimVersion Condition="'$(RimVersion)' == ''">1.6</RimVersion>
 
