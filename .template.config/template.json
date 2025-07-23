@@ -26,7 +26,7 @@
       "manualInstructions": [
         {
           "text": 
-          "\n\n-----------------------------\n\nRun `dotnet restore` in the new project\ndirectory to install NuGet dependencies.\n\nCheck packages with `dotnet list package`\nto ensure everything is installed correctly.\n\nRemember, `dotnet build` will build the\nproject and check for any issues.\n\nUpdate the sln file to replace underscores\nwith spaces in the project name.\n"
+          "\n\n-----------------------------\n\nRun `dotnet restore` in the new project\ndirectory to install NuGet dependencies.\n\nCheck packages with `dotnet list package`\nto ensure everything is installed correctly.\n\nUpdate the sln file to replace underscores\nwith spaces in the project name. Also update the AssemblyInfo.cs file\nwith the appropriate information.\n-----------------------------"
         }
       ],
       "continueOnError": true
